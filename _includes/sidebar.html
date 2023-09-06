@@ -1,0 +1,40 @@
+<div class = sidebar>
+    <div class = sidebar-wrapper>
+        <div class="categories-wrapper">
+            <div class="categories-title">
+                <p> CATEGORIES </p>
+            </div>
+            <div class="categories-inner">
+                {%- for category in site.categories -%}
+                <div class="each-category">
+                    <div class="each-category-name">{{category | first}}</div>
+                    <div class="each-category-num">({{category | last | size}})</div>
+                </div>
+                {%- endfor -%}
+            </div>
+        </div>
+        <div class="tags-wrapper">
+            <div class="tags-title">
+                <p> TAGS </p>
+            </div>
+            <div class="tags-inner">
+                {%- for tag in site.tags -%}
+                <div class="each-tag">
+                    <div class="each-tag-name">{{tag | first}}</div>
+                    <div class="each-tag-num">({{tag | last | size}})</div>
+                </div>
+                {%- endfor -%}
+            </div>
+
+        </div>
+        <div class="latest-wrapper">
+            <div class="latest-title">
+                <p> LATEST </p>
+            </div>
+            <div class="latest-inner">
+                <div class="latest-post-image"></div>
+                <div class="latest-post-title">{{site.posts[0].title}}</div>
+            </div>
+        </div>
+    </div>
+</div>

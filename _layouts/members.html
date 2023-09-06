@@ -1,0 +1,20 @@
+---
+layout: page
+---
+{%- assign members_num = page.members.size - 1 | divided_by: 3 -%}
+<div class="members-list">
+    <div class="members-line">
+        {%- for member in page.members -%}
+        <div class="members-card">
+            <div class="members-card-inner">
+                <div class="member-image"></div>
+                <div class="member-name">{{member.name}}</div>
+                <div class="member-detail-box">
+                    <div class="member-detail">{{member.detail}}</div>
+                </div>
+                <a href="{{member.url}}" class="external member-url"> Github </a>
+            </div>
+        </div>
+        {%- endfor -%}
+    </div>
+</div>
